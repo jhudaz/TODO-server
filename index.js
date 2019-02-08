@@ -1,6 +1,7 @@
 require('dotenv').config();
 
 const users = require('./api/users');
+const toDos = require('./api/todos');
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -17,6 +18,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.use('/users', users);
+app.use('/todos', toDos);
 
 sequelize
   .authenticate()
