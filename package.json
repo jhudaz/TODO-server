@@ -1,0 +1,27 @@
+{
+  "name": "todos-server",
+  "version": "1.0.0",
+  "description": "backend practice",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=development nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate:dev": "NODE_ENV=development sequelize db:migrate",
+    "seed:dev": "NODE_ENV=development sequelize db:seed:all"
+  },
+  "author": "jaime velez",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "pg": "^7.8.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.42.0",
+    "sequelize-cli": "^5.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
