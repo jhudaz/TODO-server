@@ -4,5 +4,7 @@ const router = express.Router();
 
 router.get('/todo', ToDoController.getToDos);
 router.put('/todo', ToDoController.updateToDo);
+router.post('/todo', ToDoController.createToDo);
+router.delete('/todo', ToDoController.deleteToDo);
 
 module.exports = router;
