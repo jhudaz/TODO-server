@@ -6,12 +6,13 @@ const chaiHttp = require('chai-http');
 const models = require('../models');
 
 chai.use(chaiHttp);
-
+const name = 'lorem'
 const email = 'prueba@prueba.com';
 const password = '12345';
 
 before(async () => {
   await models.User.create({
+    name,
     email,
     password
   })
@@ -27,7 +28,7 @@ after(async () => {
 
 //test 1
 
-describe('/auth', () => {
+describe('/users/auth', () => {
   it('response a success and true after login with an email and password', (done) => {
     let userLog = {
       email,
