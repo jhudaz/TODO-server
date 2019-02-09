@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=development nodemon index.js",
-    "test": "NODE_ENV=development mocha --exit",
+    "test": "NODE_ENV=test mocha --exit",
     "migrate:dev": "NODE_ENV=development sequelize db:migrate",
     "seed:dev": "NODE_ENV=development sequelize db:seed:all",
     "migrate:test": "NODE_ENV=test sequelize db:migrate"
