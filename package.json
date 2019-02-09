@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=development nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "NODE_ENV=development mocha index.js",
     "migrate:dev": "NODE_ENV=development sequelize db:migrate",
     "seed:dev": "NODE_ENV=development sequelize db:seed:all"
   },
@@ -22,6 +22,9 @@
     "sequelize-cli": "^5.4.0"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "mocha": "^5.2.0",
     "nodemon": "^1.18.9"
   }
 }
