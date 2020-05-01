@@ -8,7 +8,9 @@
     "test": "NODE_ENV=test mocha --exit",
     "migrate:dev": "NODE_ENV=development sequelize db:migrate",
     "seed:dev": "NODE_ENV=development sequelize db:seed:all",
-    "migrate:test": "NODE_ENV=test sequelize db:migrate"
+    "migrate:test": "NODE_ENV=test sequelize db:migrate",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "jaime velez",
   "license": "ISC",
@@ -20,12 +22,14 @@
     "pg": "^7.8.0",
     "pg-hstore": "^2.3.2",
     "sequelize": "^4.42.0",
-    "sequelize-cli": "^5.4.0"
+    "sequelize-cli": "^5.4.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-http": "^4.2.1",
     "mocha": "^5.2.0",
     "nodemon": "^1.18.9"
-  }
+  },
+  "snyk": true
 }
